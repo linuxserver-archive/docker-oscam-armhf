@@ -11,6 +11,8 @@ The [LinuxServer.io][linuxserverurl] team brings you another container release f
 * [Podcast][podcasturl] covers everything to do with getting the most from your Linux Server plus a focus on all things Docker and containerisation!
 
 # lsioarmhf/oscam
+[![](https://images.microbadger.com/badges/version/lsioarmhf/oscam.svg)](https://microbadger.com/images/lsioarmhf/oscam "Get your own version badge on microbadger.com")[![](https://images.microbadger.com/badges/image/lsioarmhf/oscam.svg)](http://microbadger.com/images/lsioarmhf/oscam "Get your own image badge on microbadger.com")[![Docker Pulls](https://img.shields.io/docker/pulls/lsioarmhf/oscam.svg)][hub][![Docker Stars](https://img.shields.io/docker/stars/lsioarmhf/oscam.svg)][hub][![Build Status](http://jenkins.linuxserver.io:8080/buildStatus/icon?job=Dockers/LinuxServer.io-armhf/lsioarmhf-oscam)](http://jenkins.linuxserver.io:8080/job/Dockers/job/LinuxServer.io-armhf/job/lsioarmhf-oscam/)
+[hub]: https://hub.docker.com/r/lsioarmhf/oscam/
 
 [Oscam][oscamurl] is an Open Source Conditional Access Module software used for descrambling DVB transmissions using smart cards. It's both a server and a client.
 
