@@ -1,6 +1,11 @@
 FROM lsiobase/alpine.armhf
 MAINTAINER saarg
 
+# set version label
+ARG BUILD_DATE
+ARG VERSION
+LABEL build_version="Linuxserver.io version:- ${VERSION} Build-date:- ${BUILD_DATE}"
+
 # install runtime dependencies required for Oscam
 RUN \
  apk add --no-cache \
