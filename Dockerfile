@@ -1,4 +1,4 @@
-FROM lsiobase/alpine.armhf
+FROM lsiobase/alpine.armhf:3.5
 MAINTAINER saarg
 
 # set version label
@@ -27,7 +27,7 @@ RUN \
 	libusb-dev \
 	linux-headers \
 	make \
-	openssl-dev \
+	libressl-dev \
 	pcsc-lite-dev \
 	subversion \
 	tar && \
