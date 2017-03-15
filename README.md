@@ -2,6 +2,8 @@
 [forumurl]: https://forum.linuxserver.io
 [ircurl]: https://www.linuxserver.io/irc/
 [podcasturl]: https://www.linuxserver.io/podcast/
+[appurl]: http://www.streamboard.tv/oscam/
+[hub]: https://hub.docker.com/r/lsioarmhf/oscam/
 
 [![linuxserver.io](https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/linuxserver_medium.png)][linuxserverurl]
 
@@ -12,12 +14,10 @@ The [LinuxServer.io][linuxserverurl] team brings you another container release f
 
 # lsioarmhf/oscam
 [![](https://images.microbadger.com/badges/version/lsioarmhf/oscam.svg)](https://microbadger.com/images/lsioarmhf/oscam "Get your own version badge on microbadger.com")[![](https://images.microbadger.com/badges/image/lsioarmhf/oscam.svg)](http://microbadger.com/images/lsioarmhf/oscam "Get your own image badge on microbadger.com")[![Docker Pulls](https://img.shields.io/docker/pulls/lsioarmhf/oscam.svg)][hub][![Docker Stars](https://img.shields.io/docker/stars/lsioarmhf/oscam.svg)][hub][![Build Status](http://jenkins.linuxserver.io:8080/buildStatus/icon?job=Dockers/LinuxServer.io-armhf/lsioarmhf-oscam)](http://jenkins.linuxserver.io:8080/job/Dockers/job/LinuxServer.io-armhf/job/lsioarmhf-oscam/)
-[hub]: https://hub.docker.com/r/lsioarmhf/oscam/
 
-[Oscam][oscamurl] is an Open Source Conditional Access Module software used for descrambling DVB transmissions using smart cards. It's both a server and a client.
+[Oscam][appurl] is an Open Source Conditional Access Module software used for descrambling DVB transmissions using smart cards. It's both a server and a client.
 
-[![oscam](http://download.oscam.cc/images/Logo.png)][oscamurl]
-[oscamurl]: http://www.streamboard.tv/oscam/
+[![oscam](http://download.oscam.cc/images/Logo.png)][appurl]
 
 ## Usage
 
