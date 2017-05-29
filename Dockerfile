@@ -1,4 +1,4 @@
-FROM lsiobase/alpine.armhf:3.5
+FROM lsiobase/alpine.armhf:3.6
 MAINTAINER saarg
 
 # set version label
@@ -6,20 +6,8 @@ ARG BUILD_DATE
 ARG VERSION
 LABEL build_version="Linuxserver.io version:- ${VERSION} Build-date:- ${BUILD_DATE}"
 
-# install runtime dependencies required for Oscam
+# install build packages
 RUN \
- apk add --no-cache \
-	libcrypto1.0 \
-	libssl1.0 \
-	libusb \
-	pcsc-lite \
-	pcsc-lite-libs && \
-
-# install runtime dependencies from edge
- apk add --no-cache --repository http://dl-3.alpinelinux.org/alpine/edge/community/ \
-	ccid && \
-
-# install build time dependencies
  apk add --no-cache --virtual=build-dependencies \
 	curl \
 	gcc \
@@ -32,11 +20,21 @@ RUN \
 	subversion \
 	tar && \
 
+# install runtime packages
+ apk add --no-cache \
+	libcrypto1.0 \
+	libssl1.0 \
+	libusb \
+	pcsc-lite \
+	pcsc-lite-libs && \
+
+
 # compile oscam from source
  svn checkout http://www.streamboard.tv/svn/oscam/trunk /tmp/oscam-svn && \
  cd /tmp/oscam-svn && \
  ./config.sh \
-	--enable all --disable \
+	--enable all \
+	--disable \
 		CARDREADER_DB2COM \
 		CARDREADER_INTERNAL \
 		CARDREADER_STINGER \
@@ -59,10 +57,21 @@ RUN \
  chmod 755 \
 	/usr/sbin/pcscd && \
 
+# install PCSC drivers for OmniKey devices
+ mkdir -p \
+	/tmp/omnikey && \
+ curl -o \
+ /tmp/omnikey.tar.gz -L \
+	https://www.hidglobal.com/sites/default/files/drivers/ifdokccid_linux_x86_64-v4.2.8.tar.gz && \
+ tar xzf /tmp/omnikey.tar.gz -C \
+	/tmp/omnikey --strip-components=2 && \
+ cd /tmp/omnikey && \
+ ./install && \
+
 # fix group for card readers and add abc to dialout group
- groupmod -g 24 audio && \
- groupmod -g 18 dialout && \
- usermod -a -G 18 abc && \
+ groupmod -g 24 cron && \
+ groupmod -g 16 dialout && \
+ usermod -a -G 16 abc && \
 
 # cleanup
  apk del --purge \
@@ -74,5 +83,5 @@ RUN \
 COPY root/ /
 
 # Ports and volumes
-EXPOSE 8888 10000
+EXPOSE 8888
 VOLUME /config
