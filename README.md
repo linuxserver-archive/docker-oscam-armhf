@@ -101,5 +101,6 @@ The web interface is at port 8888.
 
 ## Versions
 
++ **29.05.2017:** Rebase to alpine 3.6.
 + **09.02.2017:** Rebase to alpine 3.5.
 + **12.11.2016:** Initial release.
