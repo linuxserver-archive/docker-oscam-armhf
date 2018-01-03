@@ -101,8 +101,9 @@ The web interface is at port 8888.
 
 ## Versions
 
-+ **19.10.2017:** Add ccid package for usb card readers.
-+ **17.10.2017:** Switch to using bzr for source code, streamboard awol.
-+ **29.05.2017:** Rebase to alpine 3.6.
-+ **09.02.2017:** Rebase to alpine 3.5.
-+ **12.11.2016:** Initial release.
++ **03.01.18:** Rebase to alpine 3.7.
++ **19.10.17:** Add ccid package for usb card readers.
++ **17.10.17:** Switch to using bzr for source code, streamboard awol.
++ **29.05.17:** Rebase to alpine 3.6.
++ **09.02.17:** Rebase to alpine 3.5.
++ **12.11.16:** Initial release.
