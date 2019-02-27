@@ -1,0 +1,20 @@
+#!/usr/bin/with-contenv bash
+
+echo '
+******************************************************
+******************************************************
+*                                                    *
+*                                                    *
+*          This image has been deprecated            *
+*                                                    *
+*           Use the multi-arch images at             *
+*                                                    *
+*               linuxserver/oscam                    *
+*                                                    *
+*    https://hub.docker.com/r/linuxserver/oscam      *
+*                                                    *
+*   https://github.com/linuxserver/docker-oscam      *
+*                                                    *
+*                                                    *
+*                                                    *
+******************************************************'
